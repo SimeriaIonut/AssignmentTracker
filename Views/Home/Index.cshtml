@@ -1,4 +1,4 @@
-﻿
+﻿@model AssignmentTracker.Models.Login
 @{
     Layout = null;
 }
@@ -16,6 +16,33 @@
     <div> 
         <h1 class="text-center">AssignmentTracker</h1>
         <p class="text-center">v1.0</p>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="loginContainer">
+                        <h3 class="text-center">Login</h3>
+                        @using (Html.BeginForm())
+                        {
+                            @Html.ValidationSummary()
+                            <div class="form-group">
+                                <label>Username</label>
+                                @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+                            </div>
+
+                            <div class="form-group">
+                                <label>Password</label>
+                                @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+                            </div>
+
+                            <div class="text-center">
+                                <input class="btn btn-success" type="submit" value="Login" />
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

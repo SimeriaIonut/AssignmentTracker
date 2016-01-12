@@ -5,3 +5,11 @@
 p {
     color: #bcbcbc;
 }
+
+.loginContainer {
+    background-color:#0084B4;
+    border-radius:2px;
+    padding:15px;
+    color:white;
+    margin-top:50px;
+}
